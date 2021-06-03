@@ -20,8 +20,9 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     make install && \
     chmod +s /usr/local/bin/rtl_* && \
     cd /tmp/src/ && \
-    git clone https://github.com/merbanan/rtl_433 && \
+    git clone https://github.com/bitfliq/rtl_433 && \
     cd rtl_433/ && \
+    git checkout EcoWitt-WH31B && \
     mkdir build && \
     cd build && \
     cmake ../ && \
